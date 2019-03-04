@@ -1,0 +1,28 @@
+{
+  "type": "record",
+  "name": "raw-github-webhook",
+  "namespace": "systems.mntnr.avro",
+  "fields": [
+    {
+      "name": "github-event",
+      "type": "string",
+      "doc": "Name of the GitHub event that cause the webhook to fire"
+    },
+    {
+      "name": "hub-signature",
+      "type": "string",
+      "doc": "The signature of the payload from GitHub'"
+    },
+    {
+      "name": "github-delivery",
+      "type": "string",
+      "doc": "Delivery ID of the webhook"
+    },
+    {
+      "name": "payload",
+      "type": "bytes",
+      "doc": "raw JSON payload from the HTTP request in bytes"
+    }
+  ],
+  "doc:": "A basic schema for storing raw GitHub webhooks and associated headers"
+}
